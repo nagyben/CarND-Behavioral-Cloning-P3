@@ -103,7 +103,7 @@ To capture good driving behavior, I first recorded two laps on track one using c
 ![center-driving-2](examples/center-driving-2.jpg)
 ![center-driving-3](examples/center-driving-3.jpg)
 
-After testing the model, I then did recovery examples. Given the way that the model is set up (it outputs steering angle), it is enough to park the car on the side of the track, turn the wheels fully to the center and record a short clip.
+After testing the model, I then did recovery examples. Given the way that the model is set up (it outputs steering angle), it is enough to park the car on the side of the track, turn the wheels fully to the center and record a short clip without driving forwards.
 
 Examples:
 
