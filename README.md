@@ -58,7 +58,9 @@ Initially, I used LeNet but this was not very good. I decided to implement Nvidi
 
 #### 2. Attempts to reduce overfitting in the model
 
-I did image flipping to reduce overfitting in the model. I did not use any dropout layers because it didn't seem to be required to get a full lap of the track.
+I did image flipping to reduce overfitting in the model. Initially I did not use a dropout layer because the car managed to get around the track (but it sometimes went over the line).
+
+To improve performance, I added a dropout layer after flattening, which helped to regularize the model better.
 
 #### 3. Model parameter tuning
 
@@ -119,11 +121,12 @@ Wheels: fully to the right (+25 degrees)
 ![recovery-4](examples/recovery-4.jpg)
 Wheels: fully to the right (+25 degrees)
 
-The network learns that in these cases, the wheels should turn towards the center of the track. The car does not need to be moving to demonstrate this to the network because it is training on static images, without using speed input.
+The network learns that in these cases, the wheels should turn towards the center of the track. 
+The car does not need to be moving to demonstrate this to the network because it is training on static images, without using speed input.
 
-In total, about 3000 images were collected (left, right and center) which were augmented by flipping (= 6000 images)
+In total, about 5000 images were collected (left, right and center) which were augmented by flipping (= 10,000 images)
 
-The model was trained on about 5000 training examples and validated on about 1000 examples (80/20 split after shuffling the data)
+The model was trained on about 8000 training examples and validated on about 2000 examples (80/20 split after shuffling the data)
 
 ### 4. Final output
-[Here is a link to the video](run1.mp4) of the car driving itself around the track
+[Here is a link to the video](run2.mp4) of the car driving itself around the track
